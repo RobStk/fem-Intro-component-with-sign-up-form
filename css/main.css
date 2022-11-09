@@ -16,7 +16,47 @@ html *::after {
 body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
+  font-weight: 400;
   color: white;
+}
+
+input[type=text] {
+  border-style: solid;
+  border-radius: 0.4em;
+  border-width: 1px;
+  border-color: rgb(226, 226, 226);
+  outline: none;
+  padding: 1.4em;
+  width: 100%;
+  font-size: 0.875em;
+  font-weight: 600;
+}
+input[type=text]::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+}
+input[type=text]:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+}
+input[type=text]::placeholder {
+  font-family: "Poppins", sans-serif;
+}
+input[type=submit] {
+  border-style: none;
+  border-radius: 0.4em;
+  background-color: hsl(154deg, 59%, 51%);
+  padding: 1.2em;
+  color: white;
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 1.7em;
+  line-height: 1.25;
+  margin: 1em;
 }
 
 .attribution {
@@ -27,6 +67,22 @@ body {
   color: hsl(228deg, 45%, 44%);
 }
 
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9em;
+}
+.sign-up .terms {
+  padding: 0 1.3em;
+  font-size: 0.7em;
+  line-height: 1.8;
+  color: hsl(246deg, 25%, 77%);
+}
+.sign-up .terms a {
+  font-weight: 700;
+  color: hsl(0deg, 100%, 74%);
+}
+
 body {
   height: 100vh;
   display: grid;
@@ -34,4 +90,33 @@ body {
   grid-template-rows: 1fr max-content;
   background-image: url("./../images/bg-intro-mobile.png");
   background-color: hsl(0deg, 100%, 74%);
+}
+
+.intro-component {
+  padding: 3.5em 1.5em;
+  display: grid;
+  row-gap: 3.5em;
+  text-align: center;
+}
+.intro-component__content {
+  padding: 0.5em;
+}
+.intro-component__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.intro-component__form .tile-info {
+  background-color: hsl(248deg, 32%, 49%);
+  border-radius: 0.6em;
+  padding: 1.3em;
+  box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
+  padding-left: 3.1em;
+  padding-right: 3.1em;
+}
+.intro-component__form .tile-form {
+  background-color: white;
+  border-radius: 0.6em;
+  padding: 1.3em;
+  box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
 }

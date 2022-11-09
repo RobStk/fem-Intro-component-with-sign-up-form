@@ -1,0 +1,30 @@
+@use '../configs/colors';
+@use '../utils/screen';
+@use '../utils/tile';
+
+.intro-component {
+    padding: 3.5em 1.5em;
+    display: grid;
+    row-gap: 3.5em;
+    text-align: center;
+
+    &__content {
+        padding: 0.5em;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+
+        .tile-info {
+            @include tile.style(colors.$accent-blue);
+            padding-left: 3.1em;
+            padding-right: 3.1em;
+        }
+
+        .tile-form {
+            @include tile.style(white);
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@use "../configs/colors";
+
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9em;
+
+    .terms {
+        padding: 0 1.3em;
+        font-size: 0.7em;
+        line-height: 1.8;
+        color: colors.$neutral-grayish-blue;
+
+        a {
+            font-weight: 700;
+            color: colors.$primary-red;
+        }
+    }
+}
