@@ -1,0 +1,6 @@
+@use "../configs/fonts";
+
+body {
+    font-family: fonts.$family-main;
+    font-size: fonts.$size-base;
+}
