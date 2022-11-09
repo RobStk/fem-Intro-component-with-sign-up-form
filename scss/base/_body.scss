@@ -1,6 +1,8 @@
+@use "../configs/colors";
 @use "../configs/fonts";
 
 body {
-    font-family: fonts.$family-main;
-    font-size: fonts.$size-base;
+    font-family: map-get(fonts.$families, main);
+    font-size: 16px;
+    color: white;
 }
