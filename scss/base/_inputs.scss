@@ -3,7 +3,8 @@
 
 input {
 
-    &[type=text]{
+    &[type=text], &[type=email], &[type=password]{
+        font-family: map-get(fonts.$families, main);
         border-style: solid;
         border-radius: 0.4em;
         border-width: 1px;
@@ -23,11 +24,11 @@ input {
         border-style: none;
         border-radius: 0.4em;
         background-color: colors.$primary-green;
-        padding: 1.2em;
+        padding: 1.4em;
         color: white;
         text-transform: uppercase;
         width: 100%;
-        font-size: 1em;
+        font-size: 0.95em;
         font-weight: 500;
         cursor: pointer;
     }

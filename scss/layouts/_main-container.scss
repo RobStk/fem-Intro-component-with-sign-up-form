@@ -1,0 +1,23 @@
+@use "../utils/screen";
+@use "../configs/images";
+
+.main-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr max-content;
+    align-items: center;
+    justify-items: center;
+    background-image: map-get(images.$background, main-mobile);
+    background-size: cover;
+
+
+    @include screen.respond-to("desktop") {
+        padding-left: 0.9rem;
+        padding-right: 0.9rem;
+        background-image: map-get(images.$background, main-desktop);
+        background-position: center;
+        background-clip: content-box;
+        background-origin: content-box;
+    }
+}
