@@ -60,11 +60,11 @@
             padding: 1.3em;
         }
 
-        input[type=text],
-        input[type=email],
-        input[type=password] {
-            padding-left: 2em;
-            padding-right: 2em;
+        .text-input-container {
+            input {
+                padding-left: 2em;
+                padding-right: 2em;
+            }
         }
     }
 }

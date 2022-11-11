@@ -1,0 +1,30 @@
+@use "../configs/colors";
+
+.text-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-style: solid;
+    border-radius: 0.4em;
+    border-width: 1px;
+    border-color: rgb(226, 226, 226);
+
+    input {
+        padding: 1.4em;
+        border-radius: inherit;
+    }
+
+    .error-icon {
+        position: relative;
+        right: 1.4em;
+        display: none;
+    }
+
+    &.error {
+        border-color: colors.$primary-red;
+        border-width: 2px;
+        .error-icon {
+            display: block;
+        }
+    }
+}

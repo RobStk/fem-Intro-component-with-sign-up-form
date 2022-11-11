@@ -25,12 +25,8 @@ body {
 
 input[type=text], input[type=email], input[type=password] {
   font-family: "Poppins", sans-serif;
-  border-style: solid;
-  border-radius: 0.4em;
-  border-width: 1px;
-  border-color: rgb(226, 226, 226);
+  border: none;
   outline: none;
-  padding: 1.4em;
   width: 100%;
   font-size: 0.875em;
   font-weight: 600;
@@ -73,6 +69,32 @@ h1 {
 }
 .attribution a {
   color: hsl(228deg, 45%, 44%);
+}
+
+.text-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-style: solid;
+  border-radius: 0.4em;
+  border-width: 1px;
+  border-color: rgb(226, 226, 226);
+}
+.text-input-container input {
+  padding: 1.4em;
+  border-radius: inherit;
+}
+.text-input-container .error-icon {
+  position: relative;
+  right: 1.4em;
+  display: none;
+}
+.text-input-container.error {
+  border-color: hsl(0deg, 100%, 74%);
+  border-width: 2px;
+}
+.text-input-container.error .error-icon {
+  display: block;
 }
 
 .sign-up {
@@ -150,9 +172,7 @@ h1 {
   .intro-component .sign-up {
     padding: 1.3em;
   }
-  .intro-component input[type=text],
-.intro-component input[type=email],
-.intro-component input[type=password] {
+  .intro-component .text-input-container input {
     padding-left: 2em;
     padding-right: 2em;
   }
