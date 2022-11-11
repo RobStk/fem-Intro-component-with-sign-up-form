@@ -56,6 +56,9 @@ input[type=submit] {
   font-weight: 500;
   cursor: pointer;
 }
+input[type=submit]:hover {
+  background-color: hsl(154deg, 81%, 64%);
+}
 
 h1 {
   font-size: 1.7em;
@@ -147,7 +150,9 @@ h1 {
   .intro-component .sign-up {
     padding: 1.3em;
   }
-  .intro-component input[type=text] {
+  .intro-component input[type=text],
+.intro-component input[type=email],
+.intro-component input[type=password] {
     padding-left: 2em;
     padding-right: 2em;
   }

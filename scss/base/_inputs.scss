@@ -3,7 +3,9 @@
 
 input {
 
-    &[type=text], &[type=email], &[type=password]{
+    &[type=text],
+    &[type=email],
+    &[type=password] {
         font-family: map-get(fonts.$families, main);
         border-style: solid;
         border-radius: 0.4em;
@@ -11,16 +13,16 @@ input {
         border-color: rgb(226, 226, 226);
         outline: none;
         padding: 1.4em;
-        width:100%;
+        width: 100%;
         font-size: 0.875em;
         font-weight: 600;
 
-        &::placeholder{
+        &::placeholder {
             font-family: map-get(fonts.$families, main);
         }
     }
 
-    &[type=submit]{
+    &[type=submit] {
         border-style: none;
         border-radius: 0.4em;
         background-color: colors.$primary-green;
@@ -31,5 +33,9 @@ input {
         font-size: 0.95em;
         font-weight: 500;
         cursor: pointer;
+
+        &:hover {
+            background-color: colors.$light-green;
+        }
     }
 }
