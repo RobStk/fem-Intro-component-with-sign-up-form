@@ -1,0 +1,8 @@
+@mixin style ($color) {
+    border-color: $color;
+        border-width: 2px;
+    
+        .error-icon {
+            display: block;
+        }
+}

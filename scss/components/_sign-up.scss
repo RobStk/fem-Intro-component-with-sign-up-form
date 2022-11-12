@@ -1,4 +1,5 @@
 @use "../configs/colors";
+@use "../utils/input-error";
 
 .sign-up {
     display: flex;
@@ -14,6 +15,23 @@
         a {
             font-weight: 700;
             color: colors.$primary-red;
+        }
+    }
+
+    &__input-section {
+        display: flex;
+        flex-direction: column;
+        &.error {
+            &::after {
+                content: attr(data-error);
+                font-family: inherit;
+                font-size: x-small;
+                font-weight: 600;
+                font-style: italic;
+                text-align: right;
+                color: colors.$primary-red;
+                margin-top: 0.7em;
+            }
         }
     }
 }

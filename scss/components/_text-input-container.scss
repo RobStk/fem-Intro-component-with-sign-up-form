@@ -1,4 +1,5 @@
 @use "../configs/colors";
+@use "../utils/input-error";
 
 .text-input-container {
     position: relative;
@@ -20,11 +21,9 @@
         display: none;
     }
 
-    &.error {
-        border-color: colors.$primary-red;
-        border-width: 2px;
-        .error-icon {
-            display: block;
-        }
+    .error & {
+        @include input-error.style(colors.$primary-red);
     }
+
+    
 }
